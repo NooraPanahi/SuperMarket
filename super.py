@@ -3,7 +3,7 @@ selectedFoodList = []
 totalPrice = 0
 
 for key,values in foodList.items():
-    print(f"Food {key} price : {values}")
+    print(f"{key}, price : {values}")
 
 try:
     while True:
@@ -15,7 +15,6 @@ try:
         else:
             print("not available!")
 except KeyboardInterrupt as e:
-    print("--------------")
     print(f"your list : {selectedFoodList} , {totalPrice} toman.")
     with open("List.txt" , "w") as file :
         file.write(f"your list : {selectedFoodList} , {totalPrice} toman.")
